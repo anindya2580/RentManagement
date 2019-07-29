@@ -47,7 +47,6 @@ ResultSet rs=null;
         jButtonCancel = new javax.swing.JButton();
         jButtonLogin = new javax.swing.JButton();
         label2Register = new java.awt.Label();
-        label2 = new java.awt.Label();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("LoginAndRegisterForm");
@@ -170,11 +169,6 @@ ResultSet rs=null;
             }
         });
 
-        label2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        label2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        label2.setForeground(new java.awt.Color(153, 0, 0));
-        label2.setText("Forget Pass?");
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -194,10 +188,8 @@ ResultSet rs=null;
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGap(11, 11, 11)
                         .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButtonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 159, Short.MAX_VALUE)
+                        .addComponent(jButtonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(68, 68, 68))))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
@@ -220,9 +212,7 @@ ResultSet rs=null;
                     .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(label2Register, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(label2Register, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22))
         );
 
@@ -276,7 +266,7 @@ ResultSet rs=null;
     }//GEN-LAST:event_label2RegisterMouseClicked
 
     private void jButtonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLoginActionPerformed
-       String login="SELECT * FROM login WHERE username=? AND password=?";
+       String login="SELECT * FROM TENATSPROFILE WHERE User_Name=? AND Password=?";
        try{
            ps=con.prepareStatement(login);
            ps.setString(1, username.getText());
@@ -337,7 +327,6 @@ ResultSet rs=null;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private java.awt.Label label1;
-    private java.awt.Label label2;
     private java.awt.Label label2Close;
     private java.awt.Label label2Register;
     private java.awt.Label label3;
