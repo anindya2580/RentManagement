@@ -1,3 +1,6 @@
+
+import javax.swing.JFrame;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -26,32 +29,137 @@ public class WelcomeBox extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         label1 = new java.awt.Label();
+        label2Close = new java.awt.Label();
+        label4Min = new java.awt.Label();
+        jPanel2 = new javax.swing.JPanel();
+        button_Delete = new java.awt.Button();
+        button_Update = new java.awt.Button();
+        button_Rent = new java.awt.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        label1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        label1.setText("Welcome to Rent Management");
+        jPanel1.setBackground(new java.awt.Color(130, 224, 170));
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(93, Short.MAX_VALUE))
+        label1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        label1.setForeground(new java.awt.Color(240, 240, 240));
+        label1.setText("Welcome ");
+
+        label2Close.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        label2Close.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        label2Close.setForeground(new java.awt.Color(255, 255, 255));
+        label2Close.setText("X");
+        label2Close.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label2CloseMouseClicked(evt);
+            }
+        });
+
+        label4Min.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        label4Min.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        label4Min.setForeground(new java.awt.Color(255, 255, 255));
+        label4Min.setText("-");
+        label4Min.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label4MinMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(140, 140, 140)
+                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                .addComponent(label4Min, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(label2Close, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(139, 139, 139)
-                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(141, Short.MAX_VALUE))
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(label4Min, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label2Close, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, -1));
+
+        jPanel2.setBackground(new java.awt.Color(214, 234, 248));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        button_Delete.setBackground(new java.awt.Color(0, 102, 102));
+        button_Delete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        button_Delete.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        button_Delete.setForeground(new java.awt.Color(240, 240, 240));
+        button_Delete.setLabel("Delete Data");
+        button_Delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_DeleteActionPerformed(evt);
+            }
+        });
+        jPanel2.add(button_Delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 179, -1));
+
+        button_Update.setBackground(new java.awt.Color(0, 102, 102));
+        button_Update.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        button_Update.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        button_Update.setForeground(new java.awt.Color(240, 240, 240));
+        button_Update.setLabel("Update Data");
+        button_Update.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_UpdateActionPerformed(evt);
+            }
+        });
+        jPanel2.add(button_Update, new org.netbeans.lib.awtextra.AbsoluteConstraints(108, 47, 179, -1));
+
+        button_Rent.setBackground(new java.awt.Color(0, 102, 102));
+        button_Rent.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        button_Rent.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        button_Rent.setForeground(new java.awt.Color(240, 240, 240));
+        button_Rent.setLabel("Rent Query");
+        button_Rent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_RentActionPerformed(evt);
+            }
+        });
+        jPanel2.add(button_Rent, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 179, -1));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 96, 400, 210));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void label2CloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label2CloseMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_label2CloseMouseClicked
+
+    private void label4MinMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label4MinMouseClicked
+        this.setState(JFrame.ICONIFIED);
+    }//GEN-LAST:event_label4MinMouseClicked
+
+    private void button_UpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_UpdateActionPerformed
+        dispose();
+        new Insert().setVisible(true);
+    }//GEN-LAST:event_button_UpdateActionPerformed
+
+    private void button_DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_DeleteActionPerformed
+        dispose();
+        new Delete().setVisible(true);
+    }//GEN-LAST:event_button_DeleteActionPerformed
+
+    private void button_RentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_RentActionPerformed
+        dispose();
+        new Rent().setVisible(true);
+    }//GEN-LAST:event_button_RentActionPerformed
 
     /**
      * @param args the command line arguments
@@ -89,6 +197,13 @@ public class WelcomeBox extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Button button_Delete;
+    private java.awt.Button button_Rent;
+    private java.awt.Button button_Update;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private java.awt.Label label1;
+    private java.awt.Label label2Close;
+    private java.awt.Label label4Min;
     // End of variables declaration//GEN-END:variables
 }
